@@ -1,7 +1,11 @@
 import express from "express";
 import router from "./routes/user.js";
+import {connectDB} from "./database/database.js"
 const app = express();
 const port = 3000;
+
+//database connection
+connectDB();
 
 //using Middlewares
 app.use(express.json());
